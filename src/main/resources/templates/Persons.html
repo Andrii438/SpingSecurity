@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Number of users: <p th:text="${persons.size()}"></p>
+<form th:action="@{add}" th:object="${person}" method="post">
+    <label>
+        Name:
+    </label>
+    <input th:field="*{username}" placeholder="username"/>
+    <label>
+        Password:
+    </label>
+    <input th:field="*{password}" placeholder="password"/>
+    <label>
+        Role:
+    </label>
+    <input th:field="*{role}" placeholder="role"/>
+    <input type="submit">
+</form>
+<a th:href="helloWorld">Hello world</a>
+</body>
+</html>
